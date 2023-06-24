@@ -15,7 +15,6 @@ export class LyaService {
 
     private async loadModel() {
         this.model = await tf.loadLayersModel(`file://lya-model/model.json`);
-        console.log('Model loaded');
     }
 
     private async preprocessImage(buffer: Buffer) {
