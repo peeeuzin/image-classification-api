@@ -43,12 +43,16 @@ export class LyaService {
         const prediction = this.model.predict(image) as tf.Tensor;
         const score = tf.softmax(prediction as tf.Tensor);
 
-        const classIndex = tf.argMax(score, 1).dataSync()[0];
-        const className = this.CLASSES_NAMES[classIndex];
+        const probabilities = score.dataSync() as Float32Array;
 
-        return {
-            className,
-            score: score.dataSync()[classIndex] * 100,
-        };
+        const result = Array.from(probabilities)
+            .map((probability, index) => ({
+                probability: probability * 100,
+                className: this.CLASSES_NAMES[index],
+            }))
+            .sort((a, b) => b.probability - a.probability)
+            .slice(0, 3);
+
+        return result;
     }
 }
