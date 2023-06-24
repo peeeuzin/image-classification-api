@@ -1,10 +1,10 @@
 {
-    "name": "api",
-    "version": "0.0.1",
+    "name": "image-classification-api",
+    "version": "1.0.0",
     "description": "",
-    "author": "",
+    "author": "peeeuzin",
     "private": true,
-    "license": "UNLICENSED",
+    "license": "MIT",
     "scripts": {
         "build": "nest build",
         "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
@@ -17,7 +17,9 @@
         "test:watch": "jest --watch",
         "test:cov": "jest --coverage",
         "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-        "test:e2e": "jest --config ./test/jest-e2e.json"
+        "test:e2e": "jest --config ./test/jest-e2e.json",
+        "lya:train": "cd lya && poetry run python ./src/__init__.py && cd ..",
+        "lya:install-deps": "cd lya && poetry install && cd .."
     },
     "dependencies": {
         "@nestjs/common": "^9.0.0",
