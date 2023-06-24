@@ -28,3 +28,16 @@ $ yarn start:dev
 $ yarn build
 $ yarn start
 ```
+
+
+# Testing the API
+## Routes
+### `GET /lya/classNames` - Get the class names
+```bash
+$ curl http://localhost:3000/lya/classNames
+```
+
+### `GET /lya/predict` - Predict the class of an image
+```bash
+$ curl -X POST -F "image=@./path/to/image.jpg" http://localhost:3000/lya/predict
+```
