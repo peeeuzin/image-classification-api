@@ -1,5 +1,5 @@
 # Image Classification API
-This repository is an example to see how to use Tensorflow Serving to deploy a model and use it in a NestJS.
+This repository is an example to see how serve a machine learning model with [TensorFlow](https://www.tensorflow.org/) and [NestJS](https://nestjs.com/).
 
 ## Requirements
  - [Node.js](https://nodejs.org/en/) with [Yarn](https://yarnpkg.com/)
