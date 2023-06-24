@@ -26,7 +26,7 @@ $ yarn start:dev
 ## Run the API in production mode
 ```bash
 $ yarn build
-$ yarn start
+$ yarn start:prod
 ```
 
 
