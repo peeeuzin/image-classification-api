@@ -68,4 +68,4 @@ model.compile(
 epochs = 10
 history = model.fit(train_ds, validation_data=val_ds, epochs=epochs)
 
-tfjs.converters.save_keras_model(model, '../model')
+tfjs.converters.save_keras_model(model, '../lya-model')
